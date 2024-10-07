@@ -9,6 +9,7 @@
 1. 安装[nodejs v20.18.0](https://nodejs.org/dist/v20.18.0/node-v20.18.0-win-x64.zip)
 2. 安装pnpm `npm install --global pnpm --egistry=https://registry.npmmirror.com`
 3. 安装[rust 1.81.0](https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe)
+3. 安装[wkhtmltopdf 0.12.3](https://github.com/wkhtmltopdf/wkhtmltopdf/releases/tag/0.12.3.2)
 4. 克隆源代码：
 
 ```
@@ -31,4 +32,4 @@ cargo tauri build --target i686-pc-windows-msvc
 
 ### 2.下载预编译版
 
-打开[release]([Releases · zhang090210/extract-ets-ui (github.com)](https://github.com/zhang090210/extract-ets-ui/releases))页面
+打开[Release]([Releases · zhang090210/extract-ets-ui (github.com)](https://github.com/zhang090210/extract-ets-ui/releases))页面

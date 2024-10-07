@@ -32,4 +32,4 @@ cargo tauri build --target i686-pc-windows-msvc
 
 ### 2.下载预编译版
 
-打开[Release]([Releases · zhang090210/extract-ets-ui (github.com)](https://github.com/zhang090210/extract-ets-ui/releases))页面
+打开[Release v5.7.1]([Release v5.7.1 · zhang090210/extract-ets-ui (github.com)](https://github.com/zhang090210/extract-ets-ui/releases/tag/v5.7.1))页面

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversation Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question h3 {
+            color: #333;
+        }
+
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .options li {
+            margin-bottom: 10px;
+        }
+
+        .correct {
+            color: green;
+        }
+    </style>
+</head>
+
+
+<body>
+<div class="choose_1">
+    <h2>听后选择1</h2>
+    <ol style="list-style-type: decimal;">
+        {% for choose_1 in chooses_1 %}
+        <li>
+            <div class="question">
+                <h3>{{ choose_1[0] }}</h3>
+                <ol class="options" style="list-style-position:inside; list-style-type: upper-alpha;">
+                    {% for option in choose_1[1] %}
+                    <li class="{{ option[1] }}">{{ option[0] }}</li>
+                    {% endfor %}
+                </ol>
+            </div>
+        </li>
+        {% endfor %}
+    </ol>
+</div>
+
+<div class="choose_2">
+    <h2>听后选择2</h2>
+    <ol style="list-style-type: decimal;" start="5">
+        {% for choose_2 in chooses_2 %}
+        <li>
+            <div class="question">
+                <h3>{{ choose_2[0] }}</h3>
+                <ol class="options" style="list-style-position:inside; list-style-type: upper-alpha;">
+                    {% for option in choose_2[1] %}
+                    <li class="{{ option[1] }}">{{ option[0] }}</li>
+                    {% endfor %}
+                </ol>
+            </div>
+        </li>
+        {% endfor %}
+    </ol>
+</div>
+
+<div class="fill">
+    <h2>听后记录</h2>
+    <ol style="list-style-type: decimal;">
+        {% for fill in fills %}
+        <li class="correct">{{ fill }}</li>
+        {% endfor %}
+    </ol>
+</div>
+
+<div class="picture">
+    <h2>听后转述</h2>
+    {% for picture in pictures %}
+    <p class="correct">{{ picture }}</p>
+    {% endfor %}
+</div>
+
+<div>
+    <h2>回答问题</h2>
+    <ol style="list-style-type: decimal;">
+        {% for dialogue in dialogues %}
+        <li>
+            <div class="question">
+                <h3>{{ dialogue[0] }}</h3>
+                <ul style="list-style-type: disc;">
+                    {% for answer in dialogue[1] %}
+                    <li class="correct">{{ answer }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </li>
+        {% endfor %}
+    </ol>
+</div>
+</body>
+
+</html>

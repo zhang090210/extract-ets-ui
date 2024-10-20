@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schema.tauri.app/config/2.0.0",
+  "productName": "extract-ets-ui",
+  "version": "5.7.1",
+  "identifier": "com.extract-ets-ui.app",
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "pnpm build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "extract-ets-ui",
+        "width": 600,
+        "height": 800,
+        "minWidth": 500,
+        "minHeight": 600,
+        "resizable": true,
+        "fullscreen": false,
+        "maximizable": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "webviewInstallMode": {
+        "type": "offlineInstaller"
+      },
+      "nsis": {
+        "installMode": "perMachine"
+      }
+    },
+    "resources": {
+      "templates/senior/*": "templates/senior/"
+    }
+  }
+}
